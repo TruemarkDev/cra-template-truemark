@@ -1,0 +1,77 @@
+$white: #fff;
+$black: #000;
+
+$primary: #37b772;
+$warning: #ffcd39;
+$secondary: #0c1e4e;
+$danger: #e35d6a;
+$orange: #f2994a;
+
+//grey
+$grey: #f8f7fa;
+$grey-100: #f8f9fa;
+$grey-200: #e9ecef;
+$grey-300: #dee2e6;
+$grey-400: #ced4da;
+$grey-500: #adb5bd;
+$grey-600: #535353;
+$grey-700: #707070;
+$grey-800: #272727;
+$grey-900: #050721;
+
+//red
+$red-100: #f8d7da;
+$red-200: #f1aeb5;
+$red-300: #ea868f;
+$red-400: #e35d6a;
+$red-500: #dc3545;
+$red-600: #b02a37;
+$red-700: #842029;
+$red-800: #58151c;
+$red-900: #2c0b0e;
+
+//green
+$green-100: #d1e7dd;
+$green-200: #a3cfbb;
+$green-300: #75b798;
+$green-400: #479f76;
+$green-500: #198754;
+$green-600: #146c43;
+$green-700: #0f5132;
+$green-800: #0a3622;
+$green-900: #051b11;
+
+//primary shades color
+$primary-light-color: #2adc89;
+$primary-dark-color: #17a663;
+
+//overlay
+$primary-overlay: rgba(0, 0, 0, 0.5);
+$primary-rgba-color: rgba(209, 231, 221, 0.5);
+$modal-overlay: rgba(0, 0, 0, 0.12);
+
+//font family
+$neutrif-pro-font-family: Neutrif, sans-serif;
+$acumin-pro-font-family: Acumin, sans-serif;
+
+//font-weight
+$font-weight-light: 300;
+$font-weight-normal: 400;
+
+//font-sizes
+$h1-font-size: 3.5rem;
+$h2-font-size: 3rem;
+$h3-font-size: 2.5rem;
+$h4-font-size: 1.5rem;
+$h5-font-size: 1.125rem;
+$p-font-size: 1rem;
+$span-font-size: 0.75rem;
+
+//line height
+$h1-line-height: 4.5rem;
+$h2-line-height: 3.25rem;
+$h3-line-height: 2.625rem;
+$h4-line-height: 1.93rem;
+$h5-line-height: 1.5rem;
+$p-line-height: 1rem;
+$span-line-height: 0.75rem;

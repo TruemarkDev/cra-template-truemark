@@ -1,0 +1,29 @@
+{
+  "name": "cra-template-truemark",
+  "version": "1.0.0",
+  "description": "CRA Template with setups including, eslint, prettier, eslint, husky and reviewdog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Truemark Technology",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TruemarkDev/cra-template-truemark.git"
+  },
+  "keywords": [
+    "husky",
+    "eslint",
+    "reviewdog",
+    "gitlab",
+    "template",
+    "react",
+    "cra",
+    "cra-template"
+  ],
+  "bugs": {
+    "url": "https://github.com/TruemarkDev/cra-template-truemark/issues"
+  },
+  "homepage": "https://github.com/TruemarkDev/cra-template-truemark#readme"
+}

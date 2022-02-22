@@ -1,0 +1,7 @@
+runner:
+  eslint:
+    format: eslint
+    cmd: npm run lint
+  stylelint:
+    format: stylelint
+    cmd: npm run lint:style

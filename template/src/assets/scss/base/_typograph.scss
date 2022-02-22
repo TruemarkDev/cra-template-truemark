@@ -1,0 +1,31 @@
+@font-face {
+  @extend .fw-normal;
+
+  font-family: "Neutrif";
+  font-style: normal;
+  src: url("../../fonts/NeutrifPro/NeutrifPro-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  @extend .fw-normal;
+
+  font-family: "Neutrif";
+  font-style: normal;
+  src: url("../../fonts/NeutrifPro/NeutrifPro-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  @extend .fw-normal;
+
+  font-family: "Acumin";
+  font-style: normal;
+  src: url("../../fonts/Acumin/Acumin-RPro.woff") format("woff");
+}
+
+@font-face {
+  @extend .fw-bold;
+
+  font-family: "Acumin";
+  font-style: normal;
+  src: url("../../fonts/Acumin/Acumin-BdPro.woff") format("woff");
+}

@@ -1,0 +1,15 @@
+image: avcosystems/golang-node
+before_script:
+  - apt-get update -qq && apt-get install -y -qq nodejs
+  - mkdir -p ~/bin/ && export PATH="~/bin/:$PATH"
+  - curl -sfL https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh| sh -s -- -b ~/bin
+  # Intall node and configure project
+  - npm install
+stages:
+  - lint
+
+reviewdog-eslint:
+  stage: lint
+  script:
+    - export REVIEWDOG_GITLAB_API_TOKEN="$REVIEWDOG_TOKEN"
+    - reviewdog -reporter=gitlab-mr-discussion
