@@ -23,10 +23,10 @@ const translation = {
     assessment: "Assessment",
   },
   dashboard: {
-    welcome: "Welcome to the dashboard",
+    welcome: "Welcome to dashboard",
   },
   home: {
-    welcome: "Welcome to the home page",
+    welcome: "Welcome to home page",
   },
 };
 

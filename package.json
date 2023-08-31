@@ -26,7 +26,9 @@
         },
         "scripts": {
                 "start": "react-scripts start",
+                "build": "react-scripts build",
                 "test": "react-scripts test",
+                "eject": "react-scripts eject",
                 "prepare": "husky install",
                 "format": "prettier --write \"src/**/*.js\"",
                 "lint:style": "stylelint \"**/*.scss\"",

@@ -138,5 +138,3 @@ To find information on how to contribute to the project, you can usually refer t
 - **Linting & Formatting:** eslint, Prettier, stylelint.
 - **Git Hooks:** Employ Husky and lint-staged for pre-commit tasks.
 - **CSS Enhancement:** Leverage Sass for powerful styling.
-
-## How to setup reviewdog in our project?
