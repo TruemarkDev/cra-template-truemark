@@ -5,7 +5,6 @@ Thank you for your interest in contributing to our project! We appreciate your i
 ## How to Contribute
 
 - Fork the Template: On GitHub, click "Fork" to create your own copy.
-
 - Clone the forked repository to your local machine.
 
     `git clone https://github.com/TruemarkDev/cra-template-truemark.git` for https.
