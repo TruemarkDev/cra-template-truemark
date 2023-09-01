@@ -71,7 +71,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ## Using cra-template-truemark
 
-## How can we install cra-template-truemark.? - Step by Step Guide
+## How can we install cra-template-truemark? - Step by Step Guide
 
 1. Clone using the following repo link
 
