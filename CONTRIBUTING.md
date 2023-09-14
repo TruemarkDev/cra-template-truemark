@@ -7,9 +7,11 @@ Thank you for your interest in contributing to our project! We appreciate your i
 - Fork the Template: On GitHub, click "Fork" to create your own copy.
 - Clone the forked repository to your local machine.
 
-    `git clone https://github.com/TruemarkDev/cra-template-truemark.git` for https.
+    ```md 
+    git clone https://github.com/TruemarkDev/cra-template-truemark.git for https.
 
-    `git clone git@github.com:TruemarkDev/cra-template-truemark.git` for ssh.
+    git clone git@github.com:TruemarkDev/cra-template-truemark.git for ssh.
+    ```
 
 - Install dependencies using `npm install`.
 - Start the project using `npm start`.
@@ -22,6 +24,13 @@ Thank you for your interest in contributing to our project! We appreciate your i
 
 - Follow consistent coding style.
 - Write clear and meaningful commit messages.
+
+## Update documentation for the changes made if needed
+
+If your changes affect the functionality of the library or introduce new features, please update the documentation to reflect these changes. This includes:
+
+-  Adding new library or updating the packages.
+-  Adding any new configuration options or usage instructions.
 
 ## Creating a Pull Merge
 
@@ -44,7 +53,19 @@ Steps To Test Features
 Screenshots/Video
 
 // Media to show the UI of the task you performed
+
 ```
+
+## Creating an issue from a repository
+
+- On GitHub.com, navigate to the main page of the repository.
+- Under your repository name, click Issues.
+- Click New issue.
+- In the "Title" field, type a title for your issue.
+- In the comment body field, type a description of your issue.
+- When you're finished, click Submit new issue.
+
+This is how you can contribute to cra-template-truemark.
 
 
 

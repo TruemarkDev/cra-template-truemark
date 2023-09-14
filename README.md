@@ -4,19 +4,25 @@
 
 1. Clone using the following repo link
 
-   #### `git clone https://github.com/TruemarkDev/cra-template-truemark.git` for https.
+   ```md
+   git clone https://github.com/TruemarkDev/cra-template-truemark.git for https.
 
-   #### `git clone git@github.com:TruemarkDev/cra-template-truemark.git` for ssh.
+   git clone git@github.com:TruemarkDev/cra-template-truemark.git for ssh.
+   ```
 
 2. Go to the project folder
 
-   #### `cd cra-template-truemark`
+   ```md
+   cd cra-template-truemark
+   ```
 
 ## How can we run the project?
 
 In the project directory, you can run:
 
-### `npm start`
+   ```md
+   npm start
+   ```
 
 Runs the app in the development mode.\
  Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -45,6 +51,9 @@ The page will reload when you make changes.\
 - **prettier:** ^3.0.3
 - **sass:** ^1.66.1
 - **stylelint:** ^14.16.1
+- **@testing-library/react:** ^10.4.0
+- **cypress:** ^13.0.0
+
 
 ## Node and npm Versions
 
@@ -63,7 +72,6 @@ To find information on how to contribute to the project, you can usually refer t
 - **HTTP Requests:** axios for API interactions.
 - **Styling:** Bootstrap ensures responsive designs.
 - **Icons:** Integrate Font Awesome for customizable icons.
-- **Testing:** @testing-library for component testing.
+- **Testing:** @testing-library for unit testing and cypress for end-to-end testing.
 - **Linting & Formatting:** eslint, Prettier, stylelint.
-- **Git Hooks:** Employ Husky and lint-staged for pre-commit tasks.
 - **CSS Enhancement:** Leverage Sass for powerful styling.
