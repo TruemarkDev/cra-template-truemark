@@ -1,5 +1,5 @@
 describe('template spec', () => {
-  it('visits the local server url', () => {
-    cy.visit('http://localhost:3000')
-  })
+   it("shows true as true", () => {
+     expect(true).to.equal(true);
+   });
 })

@@ -8,12 +8,18 @@ WORKDIR /cra-template-truemark
 # Copy app files
 COPY . .
 
-# Install dependencies (npm ci makes sure the exact versions in the lockfile gets installed)
-RUN npm ci 
+# Install project dependencies
+RUN npm install
 
-# ==== RUN =======
-ENV NODE_ENV development
-ENV DOCKER_DEFAULT_PLATFORM=linux/arm64
+EXPOSE 3000
 
-# Run unit tests (replace this with the actual command for running your tests)
-CMD ["npm", "test"]
+# Create a shell script to run both npm start and unit tests
+RUN echo '#!/bin/bash' > /usr/local/bin/start-and-test \
+    && echo 'npm start &' >> /usr/local/bin/start-and-test \
+    && echo 'npx cypress run' >> /usr/local/bin/start-and-test \
+    && echo 'npm test' >> /usr/local/bin/start-and-test \
+    && chmod +x /usr/local/bin/start-and-test
+
+# Run the shell script
+CMD ["start-and-test"] 
+

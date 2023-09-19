@@ -1,5 +1,3 @@
-# TODO: need to add configurations so we can also run tests inside the docker container which could replicate the CI and help us in debugging locally: https://stackoverflow.com/questions/58709659/cypress-could-not-verify-that-this-server-is-running-when-using-docker-and-docke 
-
 version: "3"
 services:
   build_image: &image
@@ -8,15 +6,22 @@ services:
       dockerfile: Dockerfile
   app:
     <<: *image
-    command: npm start
     volumes:
       - .:/cra-template-truemark
     ports:
       - 3000:3000
     stdin_open: true
 
+  cypress:
+    image: cypress/included:12.8.1
+    command: "--browser chrome"
+    working_dir: /cypress
+    volumes:
+     - ./:/cypress
+
   unit_tests:
     <<: *image
     command: npm test
     volumes:
       - .:/cra-template-truemark
+
