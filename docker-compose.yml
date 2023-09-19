@@ -19,7 +19,7 @@ services:
     volumes:
      - ./:/cypress
 
-  unit_tests:
+  test:
     <<: *image
     command: npm test
     volumes:
