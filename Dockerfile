@@ -11,6 +11,7 @@ COPY . .
 # Install project dependencies
 RUN npm install
 
+#port used
 EXPOSE 3000
 
 # Create a shell script to run both npm start and unit tests
