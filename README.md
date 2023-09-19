@@ -8,6 +8,7 @@
    git clone https://github.com/TruemarkDev/cra-template-truemark.git for https.
 
    git clone git@github.com:TruemarkDev/cra-template-truemark.git for ssh.
+   
    ```
 
 2. Go to the project folder
