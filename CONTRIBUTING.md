@@ -5,6 +5,7 @@ Thank you for your interest in contributing to our project! We appreciate your i
 ## How to Contribute
 
 - Fork the Template: On GitHub, click "Fork" to create your own copy.
+- Create a issue first if you are adding fixes for the template.
 - Clone the forked repository to your local machine.
 
     ```md 
@@ -55,15 +56,6 @@ Screenshots/Video
 // Media to show the UI of the task you performed
 
 ```
-
-## Creating an issue from a repository
-
-- On GitHub.com, navigate to the main page of the repository.
-- Under your repository name, click Issues.
-- Click New issue.
-- In the "Title" field, type a title for your issue.
-- In the comment body field, type a description of your issue.
-- When you're finished, click Submit new issue.
 
 This is how you can contribute to cra-template-truemark.
 
