@@ -28,8 +28,27 @@ In the project directory, you can run:
 Runs the app in the development mode.\
  Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
- You may also see any lint errors in the console.
+The page will reload when you make changes.
+You may also see any lint errors in the console.
+
+## Updating Remote Origin URL
+
+When setting up your local development environment for your project, you need to follow these steps:
+
+1. Navigate to your local project directory using the terminal/command prompt.
+2. Check the current remote URLs associated with your repository by running:
+
+```
+git remote -v
+
+```
+3. To update the remote origin URL, use the following command, replacing `<new_repo_url>` with the URL of the new project repository by using following command:
+
+```
+git remote set-url origin <new_repo_url>
+
+```
+4. Verify that the remote origin URL has been updated by running `git remote -v` again. It should now point to the new project repository.
 
 ## Major Dependencies and Versions
 
