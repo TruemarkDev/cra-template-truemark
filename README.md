@@ -35,7 +35,7 @@ You may also see any lint errors in the console.
 
 When setting up your local development environment for your project, you need to follow these steps:
 
-1. Navigate to your local project directory using the terminal/command prompt.
+1. Navigate to your local project directory using the terminal.
 2. Check the current remote URLs associated with your repository by running:
 
 ```
