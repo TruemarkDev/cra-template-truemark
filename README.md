@@ -95,4 +95,3 @@ To find information on how to contribute to the project, you can usually refer t
 - **Testing:** @testing-library for unit testing and cypress for end-to-end testing.
 - **Linting & Formatting:** eslint, Prettier, stylelint.
 - **CSS Enhancement:** Leverage Sass for powerful styling.
-
