@@ -5,7 +5,7 @@ FROM node:${NODE_VERSION}-alpine
 # Set the working directory to /cra-template-truemark inside the container
 WORKDIR /cra-template-truemark
 
-# copy package.json file content
+# copy package.json file
 COPY package*.json ./
 
 # Copy app files
