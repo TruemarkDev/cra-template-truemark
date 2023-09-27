@@ -6,9 +6,7 @@ on:
       - opened
       - synchronize
 
-
 jobs:
-
   unit_test:
     image: node:18.4
     stage: test
