@@ -6,8 +6,8 @@ describe("Dashboard Component", () => {
   test("renders the component", () => {
     render(<Home />);
 
-    const text = screen.getByText("home.welcome");
+    const pageTitle = screen.getByText("home.welcome");
 
-    expect(text).toBeInTheDocument();
+    expect(pageTitle).toBeInTheDocument();
   });
 });

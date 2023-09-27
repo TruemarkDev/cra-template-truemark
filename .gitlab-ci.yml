@@ -1,15 +1,41 @@
-image: avcosystems/golang-node
+cache:
+  key:
+    files:
+      # Cache npm packages using lock file
+      - package-lock.json
+  paths:
+    - .npm/
+
 before_script:
-  - apt-get update -qq && apt-get install -y -qq nodejs
-  - mkdir -p ~/bin/ && export PATH="~/bin/:$PATH"
-  - curl -sfL https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh| sh -s -- -b ~/bin
-  # Intall node and configure project
-  - npm install
+    - npm ci --cache .npm
+
 stages:
   - lint
+  - test
 
-reviewdog-eslint:
+reviewdog:
+  image: node:18.14
   stage: lint
   script:
     - export REVIEWDOG_GITLAB_API_TOKEN="$REVIEWDOG_TOKEN"
     - reviewdog -reporter=gitlab-mr-discussion
+
+unit_test:
+  image: node:16.16
+  stage: test
+  script:
+    - mkdir -p ~/bin/ && export PATH="~/bin/:$PATH"
+    - npm run jest:ci
+
+e2e_test:
+  image: cypress/browsers:node18.14.0-chrome
+  stage: test
+  script:
+    - npm run start:ci
+  artifacts:
+    when: always
+    paths:
+      - cypress/videos/**/*.mp4
+      - cypress/screenshots/**/*.png
+    expire_in: 1 day
+
