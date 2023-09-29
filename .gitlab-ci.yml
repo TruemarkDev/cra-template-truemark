@@ -1,0 +1,23 @@
+stages:
+  - unit_test
+  - e2e_tests
+
+variables:
+  NODE_VERSION: "18.14"
+
+unit_test:
+  stage: unit_test
+  image: node:$NODE_VERSION
+  script:
+    - npm install
+    - npm run jest:ci
+
+e2e_tests:
+  stage: e2e_tests
+  image: node:$NODE_VERSION
+  script:
+    - npm install
+    - npm run start:ci
+
+only:
+  - merge_requests
