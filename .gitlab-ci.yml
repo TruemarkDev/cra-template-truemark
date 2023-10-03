@@ -5,6 +5,13 @@ stages:
 variables:
   NODE_VERSION: "18.14"
 
+eslint:
+  stage: eslint
+  image: node:$NODE_VERSION
+  script:
+    - npm install
+    - npm run lint
+
 unit_test:
   stage: unit_test
   image: node:$NODE_VERSION
