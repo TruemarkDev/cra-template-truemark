@@ -7,19 +7,22 @@ on:
       - synchronize
 
 jobs:
- eslint:
-    name: runner / eslint
+   eslint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
         with:
-          node-version: "18.14"
-      - run: yarn install
-      - uses: reviewdog/action-eslint@v1
-        with:
-          reporter: github-check
-          eslint_flags: "src/"
+          node-version: 18.14
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Code Linting
+        run: npm run lint
 
   unit_test:
     runs-on: ubuntu-latest
