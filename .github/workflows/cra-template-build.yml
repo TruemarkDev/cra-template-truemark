@@ -7,7 +7,7 @@ on:
       - synchronize
 
 jobs:
-   eslint:
+  eslint:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
