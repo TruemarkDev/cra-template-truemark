@@ -1,41 +1,30 @@
-cache:
-  key:
-    files:
-      # Cache npm packages using lock file
-      - package-lock.json
-  paths:
-    - .npm/
-
-before_script:
-    - npm ci --cache .npm
-
 stages:
-  - lint
-  - test
+  - unit_test
+  - e2e_tests
 
-reviewdog:
-  image: node:18.14
-  stage: lint
+variables:
+  NODE_VERSION: "18.14"
+
+eslint:
+  stage: eslint
+  image: node:$NODE_VERSION
   script:
-    - export REVIEWDOG_GITLAB_API_TOKEN="$REVIEWDOG_TOKEN"
-    - reviewdog -reporter=gitlab-mr-discussion
+    - npm install
+    - npm run lint
 
 unit_test:
-  image: node:16.16
-  stage: test
+  stage: unit_test
+  image: node:$NODE_VERSION
   script:
-    - mkdir -p ~/bin/ && export PATH="~/bin/:$PATH"
+    - npm install
     - npm run jest:ci
 
-e2e_test:
-  image: cypress/browsers:node18.14.0-chrome
-  stage: test
+e2e_tests:
+  stage: e2e_tests
+  image: node:$NODE_VERSION
   script:
+    - npm install
     - npm run start:ci
-  artifacts:
-    when: always
-    paths:
-      - cypress/videos/**/*.mp4
-      - cypress/screenshots/**/*.png
-    expire_in: 1 day
 
+only:
+  - merge_requests
