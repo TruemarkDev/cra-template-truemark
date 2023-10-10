@@ -1,0 +1,27 @@
+version: "3"
+services:
+  build_image: &image
+    build:
+      context: .
+      dockerfile: Dockerfile
+  app:
+    <<: *image
+    volumes:
+      - .:/cra-template-truemark
+    ports:
+      - 3000:3000
+    stdin_open: true
+
+  cypress:
+    image: cypress/included:12.8.1
+    command: "--browser chrome"
+    working_dir: /cypress
+    volumes:
+     - ./:/cypress
+
+  test:
+    <<: *image
+    command: npm test
+    volumes:
+      - .:/cra-template-truemark
+
