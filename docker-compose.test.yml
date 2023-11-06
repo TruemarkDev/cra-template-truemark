@@ -1,0 +1,15 @@
+version: "3"
+services:
+  test:
+    build:
+      context: .
+      dockerfile: Dockerfile.unit-test
+    volumes:
+      - .:/cra-template-truemark
+
+  cypress:
+    image: cypress/included:12.8.1
+    command: "--browser chrome"
+    working_dir: /cypress
+    volumes:
+     - ./:/cypress

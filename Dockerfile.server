@@ -1,0 +1,15 @@
+ARG NODE_VERSION=18.14.0
+
+FROM node:${NODE_VERSION}-alpine
+
+# Set the working directory to /cra-template-truemark inside the container
+WORKDIR /cra-template-truemark
+
+# copy package.json file content
+COPY package*.json ./
+
+# Install project dependencies
+RUN npm install
+
+# Build and start the server
+CMD ["npm", "run", "start"]
